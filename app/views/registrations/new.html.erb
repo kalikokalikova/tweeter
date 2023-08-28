@@ -10,7 +10,17 @@
   <%= form_with(url: sign_up_path, model: @user, scope: "") do |form| %>
     <%= render "shared/form_errors", resource: @user %>
 
+    <div class="mb-3">
+      <div>
+        <%= form.label :username, class: label_classes.render %>
+        <div class="mt-1">
+          <%= form.text_field :username, autofocus: true, class: input_classes.render %>
+        </div>
+      </div>
+    </div>
+
     <div class="mb-3 sm:grid sm:grid-cols-2 sm:gap-4">
+
       <div>
         <%= form.label :first_name, class: label_classes.render %>
         <div class="mt-1">

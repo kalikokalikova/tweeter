@@ -1,0 +1,6 @@
+<%= form_with(model: Tweet.new) do |f| %>
+
+  <%= f.text_area :body, placeholder: "Share yr feels" %>
+  <%= f.submit "Tweet" %>
+
+<% end %>
